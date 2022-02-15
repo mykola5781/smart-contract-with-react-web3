@@ -1,0 +1,88 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "userName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "docAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "DocumentAdded",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_userName",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "score",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct DocumentScore.Document[]",
+        "name": "_documents",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "addDocuments",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getUserDocuments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "userName",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "score",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct DocumentScore.Document[]",
+            "name": "documents",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct DocumentScore.UserDocument[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
